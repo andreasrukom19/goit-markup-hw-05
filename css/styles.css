@@ -779,36 +779,70 @@ button {
 }
 
 .confirm-container {
-  display: flex;
-  align-items: center;
-  min-height: 16px;
-  padding-left: 24px;
+  margin-bottom: 24px;
 }
 
-.confirm-label {
-  position: relative;
+.confirm-check-label {
   display: flex;
   align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--lightslate);
 }
 
-.confirm-input:not(:checked) + label::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: -24px;
+.check-field {
   width: 16px;
   height: 16px;
-  outline: 1px solid var(--navyblue-modal);
+  border: 1px solid var(--navyblue-modal);
   border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.confirm-input:checked + label::before {
-  content: "";
+.check-icon {
+  fill: currentColor;
+}
+
+.policy-link {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+  color: var(--iris-color);
+}
+
+.confirm-input:checked + .confirm-check-label .check-field {
+  border-color: var(--iris-color);
+  background-color: var(--iris-color);
+  color: var(--white-color);
+}
+
+.contacts-form-btn {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  background: var(--iris-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border: none;
+  color: var(--white-color);
   display: block;
-  position: absolute;
-  left: -24px;
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/SVG/click.svg);
-  background-repeat: no-repeat;
+  padding: 16px 32px;
+  width: 169px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-form-btn:is(:hover, :focus) {
+  background-color: var(--ocean-color);
 }
