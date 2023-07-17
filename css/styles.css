@@ -827,8 +827,8 @@ button {
 }
 
 .confirm-input:checked + .confirm-check-label .check-field {
-  border-color: var(--iris-color);
   background-color: var(--iris-color);
+  border: none;
   fill: var(--white-color);
 }
 
