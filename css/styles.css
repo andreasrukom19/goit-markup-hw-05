@@ -593,12 +593,16 @@ button {
 }
 
 .subscription-form-input {
-  flex-grow: 1;
-  padding: 8px 16px;
-  outline: 1px solid var(--white-color);
+  width: 264px;
+  height: 40px;
+  padding-left: 16px;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--white-color);
   color: var(--white-color);
   background-color: transparent;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 }
 
@@ -610,14 +614,16 @@ button {
 }
 
 .subscription-form-btn {
+  min-width: 165px;
+  height: 40px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   padding: 8px 24px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 16px;
   color: var(--white-color);
   background-color: var(--iris-color);
   border: none;
@@ -631,6 +637,7 @@ button {
 }
 
 .subscription-icon {
+  margin-left: 16px;
   fill: currentColor;
 }
 
@@ -708,16 +715,10 @@ button {
   letter-spacing: 0.02em;
   margin-bottom: 16px;
   text-align: center;
+  color: var(--navy-blue);
 }
 
 .contacts-form {}
-
-.group-inputs {
-  border: none;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 16px;
-}
 
 .modal-field:not(:last-child) {
   margin-bottom: 8px;
@@ -725,12 +726,13 @@ button {
 
 .contacts-form-input {
   width: 100%;
-  min-height: 40px;
+  height: 40px;
   padding-left: 38px;
   border-radius: 4px;
   border: 1px solid var(--navyblue-modal);
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
 }
 
 .contacts-form-input:focus {
@@ -738,7 +740,7 @@ button {
 }
 
 .contacts-form-label {
-  display: inline-block;
+  display: block;
   color: var(--lightslate);
   font-size: 12px;
   line-height: 1.17;
@@ -766,8 +768,9 @@ button {
 }
 
 .comment-text-input {
-  min-height: 120px;
-  padding-left: 16px;
+  height: 120px;
+  padding-left: 8px 16px;
+  color: rgba(46, 47, 66, 0.4);
 }
 
 .comment-text-input::placeholder {
