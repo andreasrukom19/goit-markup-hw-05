@@ -829,7 +829,7 @@ button {
 .confirm-input:checked + .confirm-check-label .check-field {
   background-color: var(--ocean-color);
   border: none;
-  fill: var(--white-color);
+  fill: var(--cloud-color);
 }
 
 .contacts-form-btn {
