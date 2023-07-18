@@ -794,9 +794,6 @@ button {
 }
 
 .confirm-check-label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -815,6 +812,7 @@ button {
   justify-content: center;
   align-items: center;
   fill: transparent;
+  margin-right: 4px;
 }
 
 .policy-link {
